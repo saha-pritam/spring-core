@@ -9,14 +9,8 @@
 
 
 	<bean class="org.pritam.springcore.Student" id="student">
-		<constructor-arg name="lastName">
-			<value>Ghosh</value>
-		</constructor-arg>
-		<constructor-arg name="id">
-			<value>20</value>
-		</constructor-arg>
-		<constructor-arg name="firstName">
-			<value>Aditya</value>
-		</constructor-arg>
+		<constructor-arg value="10" />
+		<constructor-arg value="Pritam"/>
+		<constructor-arg value="Saha"/>
 	</bean>
 </beans>
