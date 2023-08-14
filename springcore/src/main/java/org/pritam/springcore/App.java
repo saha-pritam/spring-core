@@ -1,13 +1,16 @@
 package org.pritam.springcore;
 
-/**
- * Hello world!
- *
- */
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
+
+
 public class App 
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        AbstractApplicationContext applicationContext = new ClassPathXmlApplicationContext("org/pritam/springcore/config.xml");
+        Student s = (Student) applicationContext.getBean("student");
+        System.out.println(s);
+        applicationContext.close();
     }
 }
