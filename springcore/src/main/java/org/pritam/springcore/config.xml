@@ -7,15 +7,7 @@
   http://www.springframework.org/schema/context
   https://www.springframework.org/schema/beans/spring-context.xsd">
 
-	<bean class="org.pritam.springcore.Address" id="address">
-		<property name="city" value="Kolkata"/>
-		<property name="country" value="India"/>
-	</bean>
+	<bean class="org.pritam.springcore.Address" id="address" p:city="Kolkata" p:country="India"/>
 
-	<bean class="org.pritam.springcore.Student" id="student">
-		<property name="id" value="10"/>
-		<property name="firstName" value="Pritam"/>
-		<property name="lastName" value="Saha"/>
-		<property name="address" ref="address"/>
-	</bean>
+	<bean class="org.pritam.springcore.Student" id="student" p:id="20" p:firstName="Aditya" p:lastName="Ghosh" p:address-ref="address"/>
 </beans>
