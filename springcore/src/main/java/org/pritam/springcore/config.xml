@@ -7,10 +7,27 @@
   http://www.springframework.org/schema/context
   https://www.springframework.org/schema/beans/spring-context.xsd">
 
+	<bean class="org.pritam.springcore.Address" id="address">
+		<constructor-arg>
+			<value>Kolkata</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>India</value>
+		</constructor-arg>
+	</bean>
 
 	<bean class="org.pritam.springcore.Student" id="student">
-		<constructor-arg value="10" />
-		<constructor-arg value="Pritam"/>
-		<constructor-arg value="Saha"/>
+		<constructor-arg>
+			<value>10</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>Pritam</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>Saha</value>
+		</constructor-arg>
+		<constructor-arg>
+			<ref bean="address"/>
+		</constructor-arg>
 	</bean>
 </beans>
