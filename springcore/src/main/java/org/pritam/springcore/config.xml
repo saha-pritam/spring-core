@@ -5,4 +5,15 @@
   https://www.springframework.org/schema/beans/spring-beans.xsd
   http://www.springframework.org/schema/context
   https://www.springframework.org/schema/beans/spring-context.xsd">
+	<bean class="org.pritam.springcore.Student" id="student">
+		<property name="id">
+			<value>10</value>
+		</property>
+		<property name="firstName">
+			<value>Pritam</value>
+		</property>
+		<property name="lastName">
+			<value>Saha</value>
+		</property>
+	</bean>
 </beans>
