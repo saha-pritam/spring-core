@@ -6,6 +6,42 @@
   https://www.springframework.org/schema/beans/spring-beans.xsd
   http://www.springframework.org/schema/context
   https://www.springframework.org/schema/beans/spring-context.xsd">
-  
-	<bean class="org.pritam.springcore.Student" id="student" p:id="30" p:firstName="Gunjan" p:lastName="Nath"/>
+
+	<bean class="org.pritam.springcore.Model" id="model">
+		<property name="friends">
+			<list>
+				<value>Pritam</value>
+				<value>Aditya</value>
+				<value>Gunjan</value>
+				<value>Sagar</value>
+			</list>
+		</property>
+
+		<property name="subjects">
+			<set>
+				<value>DBMS</value>
+				<value>Java8</value>
+				<value>HTML</value>
+				<value>DBMS</value>
+				<value>SQL</value>
+			</set>
+		</property>
+
+		<property name="friendsAge">
+			<map>
+				<entry key="Pritam" value="25" />
+				<entry key="Aditya" value="27" />
+				<entry key="Gunjan" value="26" />
+				<entry key="Sagar" value="26" />
+			</map>
+		</property>
+
+		<property name="properties">
+			<props>
+				<prop key="1">One</prop>
+				<prop key="2">Two</prop>
+				<prop key="3">Three</prop>
+			</props>
+		</property>
+	</bean>
 </beans>
