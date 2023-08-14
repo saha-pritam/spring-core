@@ -9,7 +9,7 @@ public class App
     public static void main( String[] args )
     {
         AbstractApplicationContext applicationContext = new ClassPathXmlApplicationContext("org/pritam/springcore/config.xml");
-        Model s = (Model) applicationContext.getBean("model");
+        Student s = (Student) applicationContext.getBean("student");
         System.out.println(s);
         applicationContext.close();
     }
