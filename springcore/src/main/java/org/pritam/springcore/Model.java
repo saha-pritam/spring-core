@@ -1,5 +1,7 @@
 package org.pritam.springcore;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -17,4 +19,6 @@ public class Model{
 	private int x;
 	@Value("200")
 	private int y;
+	@Value("#{list}")
+	private List<Integer> list;
 }
