@@ -1,15 +1,20 @@
 package org.pritam.springcore;
 
-public class Model {
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
+
+public class Model implements InitializingBean, DisposableBean {
 	public Model() {
 		System.out.println("This is constructor");
 	}
 
-	public void initialize() {
-		System.out.println("This is initialize method");
+	@Override
+	public void destroy() throws Exception {
+		System.out.println("This is destroy method");	
 	}
-	
-	public void destroy() {
-		System.out.println("This is destroy method");
+
+	@Override
+	public void afterPropertiesSet() throws Exception {
+		System.out.println("This is start method");	
 	}
 }
