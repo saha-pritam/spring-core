@@ -12,7 +12,7 @@ import lombok.ToString;
 @ToString
 @NoArgsConstructor
 @Component
-@Scope("singleton")
+@Scope("prototype")
 public class Model{
 	private int x;
 	private int y;
