@@ -15,10 +15,10 @@
 	<context:component-scan
 		base-package="org.pritam.springcore" />
 		
-	<bean class="org.pritam.springcore.ModelA" p:x="#{20+20}">
-		<property name="y" value="#{30+30}" />
+	<bean class="org.pritam.springcore.ModelA" p:x="#{20!=20}">
+		<property name="y" value="#{30>31}" />
 		<property name="z">
-			<value>#{40+40}</value>
+			<value>#{41>40}</value>
 		</property>
 	</bean>
 

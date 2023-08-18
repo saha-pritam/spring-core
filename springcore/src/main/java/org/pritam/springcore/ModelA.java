@@ -9,7 +9,7 @@ import lombok.ToString;
 @ToString
 @NoArgsConstructor
 public class ModelA{
-	private int x;
-	private int y;
-	private int z;
+	private boolean x;
+	private boolean y;
+	private boolean z;
 }

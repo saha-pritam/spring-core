@@ -13,6 +13,6 @@ import lombok.ToString;
 @NoArgsConstructor
 @Component
 public class ModelB{
-	@Value("#{5+5}")
-	private int w;
+	@Value("#{5==5}")
+	private boolean w;
 }
