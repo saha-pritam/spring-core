@@ -5,34 +5,6 @@
   https://www.springframework.org/schema/beans/spring-beans.xsd
   http://www.springframework.org/schema/context
   https://www.springframework.org/schema/beans/spring-context.xsd">
-
-	<!-- Ambiguity -->
-	<bean class="org.pritam.springcore.Model" id="model1">
-		<constructor-arg value="10" />
-		<constructor-arg value="20" />
-	</bean>
-
-	<!-- Demo of type attribute -->
-	<bean class="org.pritam.springcore.Model" id="model2">
-		<constructor-arg value="10" type="int"/>
-		<constructor-arg value="20" type="int"/>
-	</bean>
 	
-	<bean class="org.pritam.springcore.Model" id="model3">
-		<constructor-arg value="10" type="double"/>
-		<constructor-arg value="20" type="double"/>
-	</bean>
-	
-	<!-- Demo of index attribute -->
-	<bean class="org.pritam.springcore.Model" id="model4">
-		<constructor-arg value="10" type="int" index="1"/>
-		<constructor-arg value="20" type="int" index="0"/>
-	</bean>
-	
-	<bean class="org.pritam.springcore.Model" id="model5">
-		<constructor-arg value="10" type="double" index="1"/>
-		<constructor-arg value="20" type="double" index="0"/>
-	</bean>
-	
-	
+	<bean class="org.pritam.springcore.Model" init-method="initialize" destroy-method="destroy"/>	
 </beans>

@@ -1,15 +1,15 @@
 package org.pritam.springcore;
 
 public class Model {
-	public Model(double x ,double y){
-		System.out.println("Constructor with two double");
-		System.out.println("X = "+x);
-		System.out.println("Y = "+y);
+	public Model() {
+		System.out.println("This is constructor");
+	}
+
+	public void initialize() {
+		System.out.println("This is initialize method");
 	}
 	
-	public Model(int x ,int y){
-		System.out.println("Constructor with two integers");
-		System.out.println("X = "+x);
-		System.out.println("Y = "+y);
+	public void destroy() {
+		System.out.println("This is destroy method");
 	}
 }
