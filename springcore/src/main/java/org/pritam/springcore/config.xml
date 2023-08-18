@@ -7,9 +7,8 @@
   http://www.springframework.org/schema/context
   https://www.springframework.org/schema/context/spring-context.xsd">
 
-	<!-- Changed bean name from modelB to model_B -->
-	<bean class="org.pritam.springcore.ModelB" p:y="200" name="model_B"/>
+	<bean class="org.pritam.springcore.ModelB" p:y="200"/>
 
-	<!-- Autowiring by name -->
-	<bean class="org.pritam.springcore.ModelA" autowire="byName" p:x="100"></bean>
+	<!-- Autowiring by type -->
+	<bean class="org.pritam.springcore.ModelA" autowire="byType" p:x="100"></bean>
 </beans>
