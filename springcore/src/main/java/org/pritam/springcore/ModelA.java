@@ -9,7 +9,8 @@ import lombok.ToString;
 @ToString
 @NoArgsConstructor
 public class ModelA{
-	private double sqrt;
-	private double cbrt;
-	private double pi;
+	private int w;
+	private int x;
+	private int y;
+	private int z;
 }

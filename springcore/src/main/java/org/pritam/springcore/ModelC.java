@@ -11,10 +11,16 @@ import lombok.ToString;
 @Setter
 @ToString
 @NoArgsConstructor
-@Component
-public class ModelB{
-	@Value("#{modelC.x}")
+@Component("modelC")
+public class ModelC{
+	@Value("10")
 	private int x;
-	@Value("#{modelC.add(100,200)}")
+	@Value("20")
 	private int y;
+	@Value("30")
+	private int z;
+	
+	public int add(int x, int y) {
+		return x+y;
+	}
 }

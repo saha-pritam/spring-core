@@ -15,10 +15,13 @@
 	<context:component-scan
 		base-package="org.pritam.springcore" />
 
-	<bean class="org.pritam.springcore.ModelA" p:sqrt="#{T(java.lang.Math).sqrt(16)}">
-		<property name="cbrt" value="#{T(java.lang.Math).cbrt(8)}"/>
-		<property name="pi">
-			<value>#{T(java.lang.Math).PI}</value>
+	<bean class="org.pritam.springcore.ModelA" p:x="#{modelC.x}">
+		<property name="y" value="#{modelC.y}"/>
+		<property name="z">
+			<value>#{modelC.z}</value>
+		</property>
+		<property name="w">
+			<value>#{modelC.add(300,800)}</value>
 		</property>
 	</bean>
 
