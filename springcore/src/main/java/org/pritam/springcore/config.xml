@@ -15,10 +15,15 @@
 	<context:component-scan
 		base-package="org.pritam.springcore" />
 
-	<bean class="org.pritam.springcore.ModelA" p:and="#{true and false}">
-		<property name="or" value="#{true or false}"/>
-		<property name="not">
-			<value>#{not false}</value>
+	<bean class="org.pritam.springcore.ModelA" p:modelC="#{new org.pritam.springcore.ModelC(101,201)}" name="modelA1"/>
+	
+	<bean class="org.pritam.springcore.ModelA" name="modelA2">
+		<property name="modelC" value="#{new org.pritam.springcore.ModelC(102,202)}"/>
+	</bean>
+	
+	<bean class="org.pritam.springcore.ModelA" name="modelA3">
+		<property name="modelC">
+			<value>#{new org.pritam.springcore.ModelC(103,203)}</value>
 		</property>
 	</bean>
 

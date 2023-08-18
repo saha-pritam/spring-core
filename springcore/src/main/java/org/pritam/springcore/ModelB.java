@@ -15,10 +15,6 @@ import lombok.ToString;
 @NoArgsConstructor
 @Component
 public class ModelB{
-	@Value("#{true and false}")
-	private boolean and;
-	@Value("#{true or false}")
-	private boolean or;
-	@Value("#{not false}")
-	private boolean not;
+	@Value("#{new org.pritam.springcore.ModelC(100,200)}")
+	private ModelC modelC;
 }
