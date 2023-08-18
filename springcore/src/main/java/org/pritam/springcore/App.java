@@ -9,7 +9,8 @@ public class App
     public static void main( String[] args )
     {
         AbstractApplicationContext applicationContext = new ClassPathXmlApplicationContext("org/pritam/springcore/config.xml");
-        applicationContext.registerShutdownHook();
+        System.out.println(applicationContext.getBean(ModelB.class));
+        System.out.println(applicationContext.getBean(ModelA.class));
         applicationContext.close();
     }
 }
