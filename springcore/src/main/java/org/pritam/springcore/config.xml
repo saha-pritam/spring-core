@@ -11,33 +11,5 @@
   http://www.springframework.org/schema/util
   https://www.springframework.org/schema/util/spring-util.xsd">
 
-	<!-- Standalone list -->
-	<util:list id="list">
-		<value>10</value>
-		<value>20</value>
-		<value>10</value>
-	</util:list>
-
-	<!-- Standalone set -->
-	<util:set id="set">
-		<value>10</value>
-		<value>20</value>
-		<value>10</value>
-	</util:set>
-
-	<!-- Standalone map -->
-	<util:map id="map">
-		<entry key="1" value="one" />
-		<entry key="2" value="two" />
-		<entry key="3" value="three" />
-	</util:map>
-
-	<!-- Standalone properties -->
-	<util:properties id="properties">
-		<prop key="1">One</prop>
-		<prop key="2">Two</prop>
-		<prop key="3">Three</prop>
-	</util:properties>
-
-<bean class="org.pritam.springcore.Model" p:list-ref="list" p:set-ref="set" p:map-ref="map" p:properties-ref="properties"/>
+	<context:component-scan base-package="org.pritam.springcore"/>
 </beans>
