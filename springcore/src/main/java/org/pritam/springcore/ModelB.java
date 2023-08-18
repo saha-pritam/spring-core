@@ -18,12 +18,8 @@ import lombok.ToString;
 @NoArgsConstructor
 @Component
 public class ModelB{
-	@Value("#{list}")
-	private List<Integer> list;
-	@Value("#{set}")
-	private Set<Integer> set;
-	@Value("#{map}")
-	private Map<Integer,String> map;
-	@Value("#{properties}")
-	private Properties properties;
+	@Value("#{T(java.lang.Math).sqrt(16)}")
+	private double sqrt;
+	@Value("#{T(java.lang.Math).PI}")
+	private double pi;
 }
