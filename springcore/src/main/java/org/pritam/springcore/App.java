@@ -9,10 +9,12 @@ public class App
     public static void main( String[] args )
     {
         AbstractApplicationContext applicationContext = new ClassPathXmlApplicationContext("org/pritam/springcore/config.xml");
-        String string[] = applicationContext.getBeanNamesForType(Model.class);
-        for(String name:string)
-        	System.out.println(name);
-        System.out.println(applicationContext.getBean(Model.class));
+        Model a = applicationContext.getBean(Model.class);
+        Model b = applicationContext.getBean(Model.class);
+        Model c = applicationContext.getBean(Model.class);
+        System.out.println("a = "+a.hashCode());
+        System.out.println("b = "+b.hashCode());
+        System.out.println("c = "+c.hashCode());
         applicationContext.close();
     }
 }

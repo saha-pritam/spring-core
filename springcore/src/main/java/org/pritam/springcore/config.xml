@@ -11,12 +11,5 @@
   http://www.springframework.org/schema/util
   https://www.springframework.org/schema/util/spring-util.xsd">
 
-	<context:component-scan base-package="org.pritam.springcore"/>
-	
-	<util:list id="list">
-		<value>10</value>
-		<value>20</value>
-		<value>10</value>
-		<value>30</value>
-	</util:list>
+	<bean class="org.pritam.springcore.Model" p:x="10" p:y="20" scope="singleton"/>
 </beans>
