@@ -8,6 +8,12 @@ public class ModelA{
 	public ModelA() {
 		System.out.println("This is ModelA().");
 	}
+	
+	public ModelA(int x, ModelB modelB) {
+		System.out.println("This is ModelA().");
+		this.x = x;
+		this.modelB = modelB;
+	}
 
 	public int getX() {
 		return x;
