@@ -10,7 +10,7 @@ import lombok.ToString;
 @Setter
 @ToString
 @NoArgsConstructor
-@Component
+@Component("modelBean")
 public class Model{
 	private int x;
 	private int y;
