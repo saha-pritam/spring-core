@@ -1,18 +1,16 @@
 package org.pritam.springcore;
 
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 
 public class App 
 {
     public static void main( String[] args )
     {
-        AbstractApplicationContext applicationContext = new AnnotationConfigApplicationContext(JavaConfig.class);
-        Model a = (Model) applicationContext.getBean("model");
-        Model b = (Model) applicationContext.getBean("model");
-        System.out.println("a = "+a.hashCode());
-        System.out.println("b = "+b.hashCode());
+        AbstractApplicationContext applicationContext = new ClassPathXmlApplicationContext("org/pritam/springcore/config.xml");
+        System.out.println(applicationContext.getBean(ModelA.class));
+        System.out.println(applicationContext.getBean(ModelB.class));
         applicationContext.close();
     }
 }

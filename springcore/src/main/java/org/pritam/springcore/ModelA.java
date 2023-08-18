@@ -1,7 +1,5 @@
 package org.pritam.springcore;
 
-import org.springframework.stereotype.Component;
-
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -10,8 +8,8 @@ import lombok.ToString;
 @Setter
 @ToString
 @NoArgsConstructor
-@Component
-public class Model{
+public class ModelA{
 	private int x;
 	private int y;
+	private int z;
 }
