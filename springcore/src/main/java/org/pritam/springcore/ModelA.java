@@ -1,5 +1,7 @@
 package org.pritam.springcore;
 
+import java.util.List;
+
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -9,8 +11,7 @@ import lombok.ToString;
 @ToString
 @NoArgsConstructor
 public class ModelA{
-	private int w;
-	private int x;
-	private int y;
-	private int z;
+	private List<Integer> listInteger;
+	private List<String> listString;
+	private List<Character> listCharacter;
 }
