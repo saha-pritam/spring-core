@@ -11,7 +11,7 @@ import lombok.ToString;
 @ToString
 @NoArgsConstructor
 public class ModelA{
-	private List<Integer> listInteger;
-	private List<String> listString;
-	private List<Character> listCharacter;
+	private int integerArray[];
+	private String stringArray[];
+	private char characterArray[];
 }

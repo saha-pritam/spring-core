@@ -15,10 +15,10 @@ import lombok.ToString;
 @NoArgsConstructor
 @Component
 public class ModelB{
-	@Value("#{{10,20,30}}")
-	private List<Integer> listInteger;
-	@Value("#{{'Pritam','Aditya','Gunjan'}}")
-	private List<String> listString;
-	@Value("#{{'a','b','c'}}")
-	private List<Character> listCharacter;
+	@Value("#{new int[3] {10,20,30}}")
+	private int integerArray[];
+	@Value("#{new String[3] {'Pritam','Aditya','Gunjan'}}")
+	private String stringArray[];
+	@Value("#{new char[3] {'a','b','c'}}")
+	private char characterArray[];
 }
