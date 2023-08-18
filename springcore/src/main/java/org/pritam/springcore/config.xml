@@ -14,11 +14,38 @@
 
 	<context:component-scan
 		base-package="org.pritam.springcore" />
-		
-	<bean class="org.pritam.springcore.ModelA" p:x="#{20!=20}">
-		<property name="y" value="#{30>31}" />
-		<property name="z">
-			<value>#{41>40}</value>
+
+	<util:list id="list">
+		<value>10</value>
+		<value>20</value>
+		<value>30</value>
+	</util:list>
+
+	<util:set id="set">
+		<value>10</value>
+		<value>20</value>
+		<value>30</value>
+	</util:set>
+
+	<util:map id="map">
+		<entry key="1" value="Pritam" />
+		<entry key="2" value="Aditya" />
+		<entry key="3" value="Gunjan" />
+	</util:map>
+
+	<util:properties id="properties">
+		<prop key="1">One</prop>
+		<prop key="2">Two</prop>
+		<prop key="3">Three</prop>
+	</util:properties>
+
+	<bean class="org.pritam.springcore.ModelA" p:list-ref="list">
+		<property name="set" ref="set" />
+		<property name="map">
+			<ref bean="map"/>
+		</property>
+		<property name="properties">
+			<ref bean="properties"/>
 		</property>
 	</bean>
 
