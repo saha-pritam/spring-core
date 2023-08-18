@@ -1,20 +1,20 @@
 package org.pritam.springcore;
 
-import org.springframework.beans.factory.DisposableBean;
-import org.springframework.beans.factory.InitializingBean;
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 
-public class Model implements InitializingBean, DisposableBean {
+public class Model{
 	public Model() {
 		System.out.println("This is constructor");
 	}
 
-	@Override
+	@PreDestroy
 	public void destroy() throws Exception {
 		System.out.println("This is destroy method");	
 	}
 
-	@Override
-	public void afterPropertiesSet() throws Exception {
+	@PostConstruct
+	public void start() throws Exception {
 		System.out.println("This is start method");	
 	}
 }
