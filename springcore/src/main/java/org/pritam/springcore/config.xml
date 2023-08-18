@@ -11,5 +11,5 @@
   http://www.springframework.org/schema/util
   https://www.springframework.org/schema/util/spring-util.xsd">
 
-	<bean class="org.pritam.springcore.Model" p:x="10" p:y="20" scope="singleton"/>
+	<bean class="org.pritam.springcore.Model" p:x="10" p:y="20" scope="prototype"/>
 </beans>
