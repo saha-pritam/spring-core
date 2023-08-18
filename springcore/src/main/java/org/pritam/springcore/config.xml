@@ -1,15 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:c="http://www.springframework.org/schema/c"
 	xmlns:p="http://www.springframework.org/schema/p"
 	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
   https://www.springframework.org/schema/beans/spring-beans.xsd
   http://www.springframework.org/schema/context
-  https://www.springframework.org/schema/context/spring-context.xsd">
-	<context:annotation-config/>
-	<bean class="org.pritam.springcore.ModelB" c:y="200" id="modelB1"/>
-	<bean class="org.pritam.springcore.ModelB" c:y="300" id="modelB2"/>
-	<bean class="org.pritam.springcore.ModelA" p:x="100"/>
+  https://www.springframework.org/schema/context/spring-context.xsd  
+  http://www.springframework.org/schema/util
+  https://www.springframework.org/schema/util/spring-util.xsd">
+
+	<!-- Standalone list -->
+	<util:list id="list">
+		<value>10</value>
+		<value>20</value>
+		<value>10</value>
+	</util:list>
+
+	<!-- Standalone set -->
+	<util:set id="set">
+		<value>10</value>
+		<value>20</value>
+		<value>10</value>
+	</util:set>
+
+	<!-- Standalone map -->
+	<util:map id="map">
+		<entry key="1" value="one" />
+		<entry key="2" value="two" />
+		<entry key="3" value="three" />
+	</util:map>
+
+	<!-- Standalone properties -->
+	<util:properties id="properties">
+		<prop key="1">One</prop>
+		<prop key="2">Two</prop>
+		<prop key="3">Three</prop>
+	</util:properties>
+
+<bean class="org.pritam.springcore.Model" p:list-ref="list" p:set-ref="set" p:map-ref="map" p:properties-ref="properties"/>
 </beans>
