@@ -1,5 +1,6 @@
 package org.pritam.springcore;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import lombok.Getter;
@@ -12,6 +13,8 @@ import lombok.ToString;
 @NoArgsConstructor
 @Component("modelBean")
 public class Model{
+	@Value("100")
 	private int x;
+	@Value("200")
 	private int y;
 }
