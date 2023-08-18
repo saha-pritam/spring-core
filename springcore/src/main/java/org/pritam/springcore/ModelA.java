@@ -6,7 +6,6 @@ public class ModelA{
 	
 	private int x;
 	
-	@Autowired
 	private ModelB modelB;
 	
 	public int getX() {
@@ -22,6 +21,7 @@ public class ModelA{
 		return modelB;
 	}
 
+	@Autowired
 	public void setModelB(ModelB modelB) {
 		System.out.println("This is setModelB().");
 		this.modelB = modelB;
