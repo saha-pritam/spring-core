@@ -1,20 +1,14 @@
 package org.pritam.springcore;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class ModelA{
 	
 	private int x;
+	
+	@Autowired
 	private ModelB modelB;
 	
-	public ModelA() {
-		System.out.println("This is ModelA().");
-	}
-	
-	public ModelA(int x, ModelB modelB) {
-		System.out.println("This is ModelA().");
-		this.x = x;
-		this.modelB = modelB;
-	}
-
 	public int getX() {
 		return x;
 	}
