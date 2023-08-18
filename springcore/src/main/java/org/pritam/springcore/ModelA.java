@@ -8,6 +8,13 @@ public class ModelA{
 	
 	private ModelB modelB;
 	
+	@Autowired
+	public ModelA(int x, ModelB modelB) {
+		super();
+		this.x = x;
+		this.modelB = modelB;
+	}
+
 	public int getX() {
 		return x;
 	}
@@ -21,7 +28,6 @@ public class ModelA{
 		return modelB;
 	}
 
-	@Autowired
 	public void setModelB(ModelB modelB) {
 		System.out.println("This is setModelB().");
 		this.modelB = modelB;

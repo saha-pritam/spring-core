@@ -3,6 +3,11 @@ package org.pritam.springcore;
 public class ModelB {
 	private int y;
 
+	public ModelB(int y) {
+		super();
+		this.y = y;
+	}
+
 	public int getY() {
 		return y;
 	}
