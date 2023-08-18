@@ -1,20 +1,16 @@
 package org.pritam.springcore;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 public class ModelA{
 	
 	private int x;
 	
+	@Qualifier("modelB1")
+	@Autowired
 	private ModelB modelB;
 	
-	@Autowired
-	public ModelA(int x, ModelB modelB) {
-		super();
-		this.x = x;
-		this.modelB = modelB;
-	}
-
 	public int getX() {
 		return x;
 	}
