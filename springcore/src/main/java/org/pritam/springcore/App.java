@@ -10,8 +10,9 @@ public class App
     {
         AbstractApplicationContext applicationContext = new AnnotationConfigApplicationContext(JavaConfig.class);
         Model a = (Model) applicationContext.getBean("model");
+        Model b = (Model) applicationContext.getBean("model");
         System.out.println("a = "+a.hashCode());
-        System.out.println(a);
+        System.out.println("b = "+b.hashCode());
         applicationContext.close();
     }
 }
