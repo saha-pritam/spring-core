@@ -15,10 +15,10 @@
 	<context:component-scan
 		base-package="org.pritam.springcore" />
 
-	<bean class="org.pritam.springcore.ModelA" p:integerArray="#{new int[3] {10,20,30}}">
-		<property name="stringArray" value="#{new String[3] {'Pritam','Aditya','Gunjan'}}"/>
-		<property name="characterArray">
-			<value>#{new char[3] {'a','b','c'}}</value>
+	<bean class="org.pritam.springcore.ModelA" p:and="#{true and false}">
+		<property name="or" value="#{true or false}"/>
+		<property name="not">
+			<value>#{not false}</value>
 		</property>
 	</bean>
 

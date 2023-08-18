@@ -11,7 +11,7 @@ import lombok.ToString;
 @ToString
 @NoArgsConstructor
 public class ModelA{
-	private int integerArray[];
-	private String stringArray[];
-	private char characterArray[];
+	private boolean and;
+	private boolean or;
+	private boolean not;
 }
